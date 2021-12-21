@@ -1,0 +1,25 @@
+server:
+  port: 8999
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      routes:
+        - id: receptionist-servie
+          uri: lb://receptionist-service
+          predicates:
+            - Path=/receptionist/**
+        - id: manager-servie
+          uri: lb://manager-service
+          predicates:
+            - Path=/manager/**
+        - id: login-servie
+          uri: lb://login-service
+          predicates:
+            - Path=/login/**
