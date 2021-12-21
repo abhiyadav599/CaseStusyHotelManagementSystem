@@ -1,0 +1,78 @@
+<div class="col-md-6 offset-md-3">
+
+
+    <form (ngSubmit)="onSubmit()">
+
+        <h3>Add guest</h3>
+
+        <div class="form-group">
+            <label> Member Code </label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="guest.id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label> Guest Name</label>
+            <input type="text" class="form-control" id="guestName" [(ngModel)]="guest.guestName" name="guestName">
+        </div>
+
+        <div class="form-group">
+            <label> Phone Number</label>
+            <input type="text" class="form-control" id="phoneNo" [(ngModel)]="guest.phoneNo" name="phoneNo">
+        </div>
+
+        <div class="form-group">
+            <label> Compny Name</label>
+            <input type="text" class="form-control" id="companyName" [(ngModel)]="guest.companyName" name="companyName">
+        </div>
+
+        <div class="form-group">
+            <label> Email</label>
+            <input type="email" class="form-control" id="eMail" [(ngModel)]="guest.eMail" name="eMail">
+        </div>
+
+        <div class="form-group">
+            <label> Gender</label>
+            <input type="text" class="form-control" id="guestGender" [(ngModel)]="guest.guestGender" name="guestGender">
+        </div>
+
+        <div class="form-group">
+            <label> Address</label>
+            <input type="text" class="form-control" id="guestAdd" [(ngModel)]="guest.guestAdd" name="guestAdd">
+        </div>
+
+        <br>
+
+        <h3>Add Room Details</h3>
+
+        <div class="form-group">
+            <label> Room No</label>
+            <input type="text" class="form-control" id="roomNo" [(ngModel)]="guest.roomNo" name="roomNo">
+        </div>
+
+        <!-- <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field> -->
+
+        <div class="form-group">
+            <label> CheckIn Date</label>
+            <input type="text" class="form-control" id="checkIn" [(ngModel)]="guest.checkIn" name="checkIn">
+        </div>
+
+        <div class="form-group">
+            <label> CheckOut Date</label>
+            <input type="text" class="form-control" id="checkOut" [(ngModel)]="guest.checkOut" name="checkOut">
+        </div>
+
+        <button class="btn btn-success" type="submit">Book</button>
+
+    </form>
+</div>
+<br>
+<br>
+<br>

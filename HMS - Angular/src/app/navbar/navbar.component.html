@@ -1,0 +1,73 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>home</mat-icon>
+    </a>
+    <span>Hotel Management System</span>
+    <span class="example-spacer"></span>
+    <a
+    *ngIf="!login.isLoggedIn()"style="margin-right: 50px;"
+    [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Login
+    </a>
+    <a 
+    *ngIf="!login.isLoggedIn()"
+    [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Register
+    </a>
+    <a 
+    *ngIf="login.isLoggedIn()"
+    mat-icon-button 
+    style="margin-right: 50px;"
+    class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        {{ login.getUser().username }}
+    </a> 
+    <a 
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()"
+    mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Logout
+    </a>
+    <!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark"> -->
+        <!-- <ul class="navbar-nav">
+      
+          <li class="nav-item">
+            <a routerLink="guest" routerLinkActive="active" class="nav-link">Guest List</a>
+          </li>
+      
+          <li class="nav-item">
+            <a routerLink="create-guest" routerLinkActive="active" class="nav-link"> Add Guest </a>
+          </li>
+      
+          <li class="nav-item">
+            <a routerLink="staff" routerLinkActive="active" class="nav-link">Staff List</a>
+          </li>
+      
+          <li class="nav-item">
+            <a routerLink="create-staff" routerLinkActive="" class="nav-link"> Add Staff </a>
+          </li>
+      
+        </ul> -->
+      <!-- </nav> -->
+
+</mat-toolbar>
+<!-- <ul class="navbar-nav">
+      
+    <li class="nav-item">
+      <a routerLink="guest" routerLinkActive="active" class="nav-link">Guest/Room</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="create-guest" routerLinkActive="active" class="nav-link"> Add Guest and Book a Room </a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="staff" routerLinkActive="active" class="nav-link">Staff List</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="create-staff" routerLinkActive="" class="nav-link"> Add Staff </a>
+    </li>
+
+  </ul> -->
+
+  

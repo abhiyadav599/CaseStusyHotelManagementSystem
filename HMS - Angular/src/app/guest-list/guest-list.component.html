@@ -1,0 +1,30 @@
+<h2>Guest/Room List</h2>
+<button mat-raised-button color="primary" onclick="history.back()">Go Back</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Guest Id</th>
+            <th>Guest Name</th>
+            <th>Room No</th>
+            <th>E-mail</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let guest of guest">
+            <td> {{ guest.id }} </td>
+            <td> {{ guest.guestName }} </td>
+            <td> {{ guest.roomNo }} </td>
+            <td> {{ guest.eMail }} </td>
+            <td> {{ guest.checkIn }} </td>
+            <td> {{ guest.checkOut }} </td>
+            <td>
+                <button (click) = "updateGuest(guest.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteGuest(guest.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "guestDetails(guest.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
